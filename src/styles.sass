@@ -1,12 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap')
 
-$dark-blue-color : #00539f //Azul oscuro header & Textos Azul header 
-$orange-color : #EE7F00 //Naranja header 
-$gray-color : #4D4D4D //Gris textos sobre blanco body & Footer gris 
-$white-color : #F0F0F0 //textos blancos sobre footer gris 
-$light-gray-color : #BBBBBB //Iconos logo gris sobre footer gris 
-$light-blue-color : #00a7e3 //Azul celeste contáctanos 
+@import "tailwindcss/base"
+@import "tailwindcss/components"
+@import "tailwindcss/utilities"
+
+:root
+  --dark-blue-color : #00539f
+  --orange-color : #EE7F00
+  --gray-color : #4D4D4D
+  --white-color : #F0F0F0
+  --light-gray-color : #BBBBBB
+  --light-blue-color : #00a7e3
 
 body
   font-family: 'Ubuntu', sans-serif
+  font-size: 18px

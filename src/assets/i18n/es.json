@@ -1,0 +1,12 @@
+{
+  "Sitetitle" : "Sitio Angular Multi Lenguaje",
+  "menu" : {
+    "home" : "Inicio",
+    "products" : "Productos",
+    "about us" : "Nosotros",
+    "contact" : "Contacto"
+  },
+  "home-section" : {
+    "branding" : "En Evoluciona diseñamos soluciones de Inteligencia de Transporte simples, prácticas, pensando siempre en las necesidades reales de nuestros clientes."
+  }
+}

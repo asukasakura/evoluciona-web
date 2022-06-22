@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  mainMenu: { 
+    defaultOptions: Array<any>, accessLink: Array<any> }
+     = { defaultOptions: [], accessLink: [] 
+  }
 
+  constructor(
+    public translate: TranslateService,
+    private router: Router
+  ) {
+    translate.addLangs(['en', 'es']);
+    translate.setDefaultLang('en');
+  }
+  switchLang(lang: string) {
+    this.translate.use(lang);
+  }
   ngOnInit(): void {
+    this.mainMenu.defaultOptions = [
+      {
+        name: 'Inicio',
+        router: ['/', 'inicio']
+      },
+      {
+        name: 'Productos',
+        router: ['/', 'products']
+      },
+      {
+        name: 'Nosotros',
+        router: ['/', 'us']
+      },
+      {
+        name: 'Contacto',
+        router: ['/', 'contact']
+      }
+    ]
   }
 
 }

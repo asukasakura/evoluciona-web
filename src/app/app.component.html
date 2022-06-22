@@ -1,5 +1,30 @@
+<mat-grid-list class="bg-primary" cols="3" gutterSize="15px" rowHeight="50px">
+  <mat-grid-tile></mat-grid-tile>
+  <mat-grid-tile>
+      <select class="bg-primary text-extra-light-gray"
+          #selectedLang 
+          (change)="switchLang(selectedLang.value)">
+        <option *ngFor="let language of translate.getLangs()" 
+          [value]="language"
+          [selected]="language === translate.currentLang">
+          {{ language }}
+        </option>
+      </select>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    
+  </mat-grid-tile>
+</mat-grid-list>
 
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
+
+
+<!-- <nav class="navbar navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand">
+      {{'Sitetitle' | translate }} <br>
+      {{'home-section.branding' | translate }}
+    </a>
+  </div>
+</nav> -->
+
 <router-outlet></router-outlet>

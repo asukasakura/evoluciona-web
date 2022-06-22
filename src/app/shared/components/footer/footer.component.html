@@ -1,1 +1,30 @@
-<p>footer works!</p>
+<mat-grid-list cols="3" gutterSize="15px" rowHeight="2:1">
+  <mat-grid-tile>
+    <ul class="navbar uppercase text-extra-light-gray">
+      <li [routerLink]="item.router"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      *ngFor="let item of mainMenu.defaultOptions">
+      {{item.name}}
+    </li>
+  </ul>
+  </mat-grid-tile>
+  <mat-grid-tile class="brand">
+    <div>
+      <img class="" src="./assets/images/globaltech_logo_bn.svg" alt="" srcset="">
+      <p><small>
+        All Rights Reserved. © 2022 EVOLUCIONA INTERNACIONAL.
+      </small></p>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div>
+      <p class="font-bold text-sm">
+        SÍGUENOS EN LAS REDES
+      </p>
+      <ul class="flex justify-between list-icons">
+        <li *ngFor="let n of [1,2,3]">icon</li>
+      </ul>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,27 +1,30 @@
-<button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
-<!-- #docregion menu-position -->
-<mat-menu #aboveMenu="matMenu" yPosition="above">
-<!-- #enddocregion menu-position -->
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="belowMenu">Below</button>
-<mat-menu #belowMenu="matMenu" yPosition="below">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>
-<mat-menu #beforeMenu="matMenu" xPosition="before">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+<!-- <span class="form-inline">
+  <select 
+      class="form-control" 
+      #selectedLang 
+      (change)="switchLang(selectedLang.value)">
+    <option *ngFor="let language of translate.getLangs()" 
+      [value]="language"
+      [selected]="language === translate.currentLang">
+      {{ language }}
+    </option>
+  </select>
+</span> -->
 
 
-<button mat-button [matMenuTriggerFor]="afterMenu">After</button>
-<mat-menu #afterMenu="matMenu" xPosition="after">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>
+<mat-grid-list cols="2" gutterSize="15px" rowHeight="6:1">
+  <mat-grid-tile class="brand">
+    <img class="object-cover h-24 absolute left-0" src="./assets/images/globaltech_logo_color.svg" alt="" srcset="">
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <ul class="flex navbar">
+      <li [routerLink]="item.router"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      *ngFor="let item of mainMenu.defaultOptions">
+        {{item.name}}
+      </li>
+    </ul>
+  </mat-grid-tile>
+</mat-grid-list>
 

@@ -1,0 +1,15 @@
+<div *ngIf="mode == 'video'">
+  <!-- <div [ngClass]="{'left' : horizontalAlign == 'left'}"></div> -->
+  <video autoplay="" id="heroVideo" loop="" muted="" [poster]="imagebackground" class="">
+    <source *ngFor="let format of ['mp4', 'webm', 'ogv']" [src]="videobackground + '.' + format" type="video/{{format}}" />
+  </video>
+  <img alt="poster image mobile" class="poster img-fluid mx-auto md:hidden" [src]="imagebackground" />
+</div>
+<div *ngIf="mode == 'image'">
+  <img alt="poster image" class="poster img-fluid mx-auto" [src]="imagebackground" />
+</div>
+<div [ngClass]="horizontalAlign == 'left' ? 'left-8' : 'right-8'" class="absolute top-1/2 transform -translate-y-1/2 w-1/3 text-3xl">
+  <h3 class="text-white ">
+    {{headText}}
+  </h3>
+</div>
