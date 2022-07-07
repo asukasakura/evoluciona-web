@@ -10,9 +10,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from './material.module';
 
-// AOT compilation support
-export function httpTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -27,9 +26,10 @@ export function httpTranslateLoader(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: httpTranslateLoader,
+        useFactory: HttpLoaderFactory,
         deps: [HttpClient]
-      }
+      },
+      isolate: true,
     }),
     MaterialModule
   ],

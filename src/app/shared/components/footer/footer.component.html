@@ -1,13 +1,33 @@
 <mat-grid-list cols="3" gutterSize="15px" rowHeight="2:1">
   <mat-grid-tile>
     <ul class="navbar uppercase text-extra-light-gray">
-      <li [routerLink]="item.router"
+      <!-- <li [routerLink]="item.router"
+        routerLinkActive="router-link-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        *ngFor="let item of mainMenu.defaultOptions">
+        {{item.name}}
+      </li> -->
+      <li routerLink="/home"
       routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      *ngFor="let item of mainMenu.defaultOptions">
-      {{item.name}}
-    </li>
-  </ul>
+      [routerLinkActiveOptions]="{ exact: true }">
+        {{'MENU.HOME' | translate }}
+      </li>
+      <li routerLink="/products"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }">
+        {{'MENU.PRODUCTS' | translate }}
+      </li>
+      <li routerLink="/contact"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }">
+        {{'MENU.ABOUT_US' | translate }}
+      </li>
+      <li routerLink="/us"
+      routerLinkActive="router-link-active"
+      [routerLinkActiveOptions]="{ exact: true }">
+        {{'MENU.CONTACT' | translate }}
+      </li>
+    </ul>
   </mat-grid-tile>
   <mat-grid-tile class="brand">
     <div>

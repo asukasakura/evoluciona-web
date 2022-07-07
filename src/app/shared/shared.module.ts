@@ -12,6 +12,14 @@ import { WrapCardsComponent } from './components/wrap-cards/wrap-cards.component
 import { CardComponent } from './components/card/card.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -27,7 +35,15 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
   imports: [
     RouterModule,
     MaterialModule,
-    CommonModule
+    CommonModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      },
+      isolate: true,
+    }),
   ],
   exports: [
     HeaderComponent,

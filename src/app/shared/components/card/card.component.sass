@@ -1,0 +1,24 @@
+::ng-deep
+  .mat-card
+    color: #4D4D4D
+    font-family: 'Ubuntu', sans-serif
+    &:not([class*=mat-elevation-z])
+      box-shadow: none
+    .mat-card-header
+      .mat-card-header-text
+        margin: 0 0 1rem 0
+        &::after
+          content: ''
+          height: 2px
+          width: 3rem
+          background: #EE7F00
+          display: block
+      .mat-card-title
+        font-size: 17px
+        font-weight: 700
+        line-height: 120%
+        min-height: 34px
+        margin: 0
+    .mat-card-content *
+      font-size: 15px
+      font-weight: 500

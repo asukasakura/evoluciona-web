@@ -1,12 +1,9 @@
 {
   "Sitetitle": "Angular Multi Language Site",
-  "menu" : {
-    "home" : "Home",
-    "products" : "Products",
-    "about us" : "About us",
-    "contact" : "Contact"
-  },
-  "home-section" : {
-    "branding" : "At Evoluciona we design simple, practical Transport Intelligence solutions, always thinking about the real needs of our clients."
+  "MENU" : {
+    "HOME" : "Home",
+    "PRODUCTS" : "Products",
+    "ABOUT_US" : "About us",
+    "CONTACT" : "Contact"
   }
 }

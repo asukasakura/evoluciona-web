@@ -1,5 +1,5 @@
 <mat-grid-list cols="4" gutterSize="15px" class="des" rowHeight="fit">
-  <mat-grid-tile *ngFor="let n of [1,2,3,4]">
-    <app-card></app-card>
+  <mat-grid-tile *ngFor="let card of dataCards">
+    <app-card [cards]="card"></app-card>
   </mat-grid-tile>
 </mat-grid-list>

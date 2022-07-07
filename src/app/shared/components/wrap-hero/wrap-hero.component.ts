@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./wrap-hero.component.sass']
 })
 export class WrapHeroComponent implements OnInit {
-  @Input() headText?: string = ''
+  @Input() headText?: any = ''
   @Input() videobackground?: string = ''
   @Input() imagebackground?: string = ''
   @Input() horizontalAlign?: 'left' | 'right' | '' = ''

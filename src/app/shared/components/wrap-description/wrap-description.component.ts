@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CardModel } from '@core/models/card.model';
 
 @Component({
   selector: 'app-wrap-description',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wrap-description.component.sass']
 })
 export class WrapDescriptionComponent implements OnInit {
+
+  @Input() descriptionTitle? : string = ''
+  @Input() descriptionText? : string = ''
+  @Input() dataCards : Array<CardModel> = []
 
   constructor() { }
 

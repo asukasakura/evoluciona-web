@@ -1,9 +1,9 @@
-<mat-grid-list cols="2" gutterSize="15px" class="des" rowHeight="fit">
+<mat-grid-list cols="2" gutterSize="15px" class="bg-primary des" rowHeight="300px">
   <mat-grid-tile>
-    Nosotros
+    <h2 [innerHTML]="'DESCRIPTION.TITLE' | translate" class="text-4xl text-left"></h2>
   </mat-grid-tile>
   <mat-grid-tile>
-    Evoluciona es una empresa con más de 15 años de experiencia en Sistemas Inteligentes de Transporte en distintas autopistas de Europa y América. Nuestra especialización se extiende desde la conceptualización, formulación comercial de productos y servicios tecnológicos, hasta el establecimiento de requerimientos, dirección, adquisición/licitación, diseño, construcción y mantenimiento de soluciones que ayuden a mejorar las operaciones y la eficacia de los sistemas. En Evoluciona la experiencia nos permite diseñar soluciones simples, prácticas, pensando siempre en las necesidades reales de nuestros clientes.
+    <p [innerHTML]="'DESCRIPTION.TEXT' | translate"></p>
   </mat-grid-tile>
 </mat-grid-list>
 

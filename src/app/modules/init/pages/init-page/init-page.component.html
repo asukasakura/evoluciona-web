@@ -1,11 +1,17 @@
+<!-- {{ 'HOME_WORKS' | translate }} -->
+<!-- <label translate='login.username'></label>
+<div [translate]="'HOME_WORKS'" [translateParams]="{value: 'world'}"></div>
+
+<div [innerHTML]="'HOME_WORKS' | translate"></div> -->
 <app-wrap-hero 
-  [headText]="'En Evoluciona diseñamos soluciones de Inteligencia de Transporte simples, prácticas, pensando siempre en las necesidades reales de nuestros clientes.'"
   [mode]="'video'"
   [videobackground]="'./assets/video/home-hero-video'"
   [imagebackground]="'./assets/images/poster-home-hero.png'">
 </app-wrap-hero>
 <app-wrap-description>
 </app-wrap-description>
-<app-wrap-cards>
+<app-wrap-cards [dataCards]="dataCards">
 </app-wrap-cards>
-<app-call-to-action></app-call-to-action>
+<div class="text-center my-10">
+  <app-call-to-action></app-call-to-action>
+</div>

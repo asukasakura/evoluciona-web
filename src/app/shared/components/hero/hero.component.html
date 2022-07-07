@@ -9,7 +9,7 @@
   <img alt="poster image" class="poster img-fluid mx-auto" [src]="imagebackground" />
 </div>
 <div [ngClass]="horizontalAlign == 'left' ? 'left-8' : 'right-8'" class="absolute top-1/2 transform -translate-y-1/2 w-1/3 text-3xl">
-  <h3 class="text-white ">
-    {{headText}}
+  <h3 class="text-white " [innerHTML]="'HEADER_TEXT' | translate">
+    {{headText}} 
   </h3>
 </div>
