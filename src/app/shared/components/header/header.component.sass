@@ -1,7 +1,22 @@
 .navbar
   li
-    @apply mx-2 px-2 py-2 text-primary
+    @apply mx-2 px-2 py-2 lg:py-5 text-primary
     cursor: pointer
     font-weight: 700
+    white-space: nowrap
     &.router-link-active
       border-bottom: 3px solid var(--orange-color)
+::ng-deep
+  app-header
+    mat-icon.mat-icon
+      font-size: 2rem
+    app-social-media
+      mat-icon.mat-icon
+        fill: rgba(#FFFFFF, 1)
+        height: 2rem
+        width: 2rem
+  .brand img
+    @apply min-h-[100px] md:min-w-[300px]
+  .text-white
+    @media screen and (max-width: 769px)
+      color: white!important

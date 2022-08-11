@@ -1,50 +1,26 @@
-<mat-grid-list cols="3" gutterSize="15px" rowHeight="2:1">
-  <mat-grid-tile>
-    <ul class="navbar uppercase text-extra-light-gray">
-      <!-- <li [routerLink]="item.router"
+<div class="grid grid-cols-1 md:grid-cols-3">
+  <div>
+    <ul class="navbar uppercase text-extra-light-gray text-center md:text-left">
+      <li [routerLink]="item.router"
         routerLinkActive="router-link-active"
         [routerLinkActiveOptions]="{ exact: true }"
         *ngFor="let item of mainMenu.defaultOptions">
-        {{item.name}}
-      </li> -->
-      <li routerLink="/home"
-      routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }">
-        {{'MENU.HOME' | translate }}
-      </li>
-      <li routerLink="/products"
-      routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }">
-        {{'MENU.PRODUCTS' | translate }}
-      </li>
-      <li routerLink="/contact"
-      routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }">
-        {{'MENU.ABOUT_US' | translate }}
-      </li>
-      <li routerLink="/us"
-      routerLinkActive="router-link-active"
-      [routerLinkActiveOptions]="{ exact: true }">
-        {{'MENU.CONTACT' | translate }}
+        {{item.name | translate}}
       </li>
     </ul>
-  </mat-grid-tile>
-  <mat-grid-tile class="brand">
+  </div>
+  <div class="brand self-center place-content-center text-center">
+    <img class="max-w-xs lg:max-w-full block mx-auto" src="./assets/images/globaltech_logo_bn.svg" alt="" srcset="">
+    <p><small>
+      {{'ALL_RIGHTS_RESERVED' | translate}} © 2022 EVOLUCIONA INTERNACIONAL.
+    </small></p>
+  </div>
+  <div class="self-center mt-8 md:mt-0 md:justify-self-end">
     <div>
-      <img class="" src="./assets/images/globaltech_logo_bn.svg" alt="" srcset="">
-      <p><small>
-        All Rights Reserved. © 2022 EVOLUCIONA INTERNACIONAL.
-      </small></p>
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <div>
-      <p class="font-bold text-sm">
-        SÍGUENOS EN LAS REDES
+      <p class="font-bold text-sm mb-5 text-center">
+        {{'FOLLOW_US_ON_NETWORKS' | translate}}
       </p>
-      <ul class="flex justify-between list-icons">
-        <li *ngFor="let n of [1,2,3]">icon</li>
-      </ul>
+      <app-social-media></app-social-media>
     </div>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>

@@ -14,6 +14,7 @@ module.exports = {
       'extra-light-gray' : '#F0F0F0',
       'light-gray' : '#BBBBBB',
       'secondary' : '#00a7e3',
+      'white' : "#FFFFFF"
     },
     extend: {
       backgroundColor: theme => ({
@@ -32,6 +33,7 @@ module.exports = {
         'extra-light-gray' : '#F0F0F0',
         'light-gray' : '#BBBBBB',
         'secondary' : '#00a7e3',
+        'white': '#FFFFFF'
       },
       container: {
         center: true,

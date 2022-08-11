@@ -1,4 +1,17 @@
 ::ng-deep
-  .des
-    height: 100%
+  .description
     color: white
+    padding-top: 3em
+    padding-bottom: 3em
+    &:first-child
+      position: relative
+      &:after
+        content: ''
+        @apply bg-orange
+        bottom: 0
+        display: block
+        height: 1rem
+        left: 0
+        position: absolute
+        width: 10rem
+        

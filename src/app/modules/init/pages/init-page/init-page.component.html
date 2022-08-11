@@ -1,17 +1,20 @@
-<!-- {{ 'HOME_WORKS' | translate }} -->
-<!-- <label translate='login.username'></label>
-<div [translate]="'HOME_WORKS'" [translateParams]="{value: 'world'}"></div>
-
-<div [innerHTML]="'HOME_WORKS' | translate"></div> -->
 <app-wrap-hero 
   [mode]="'video'"
   [videobackground]="'./assets/video/home-hero-video'"
   [imagebackground]="'./assets/images/poster-home-hero.png'">
 </app-wrap-hero>
-<app-wrap-description>
+<app-wrap-description
+  id="about-us"
+  [gridCols]="gridCols"
+  [spanCol1]="spanCol1"
+  [spanCol2]="spanCol2"
+  [startCol2]="startCol2"
+  appScrollSection="one">
 </app-wrap-description>
-<app-wrap-cards [dataCards]="dataCards">
+<app-wrap-cards [dataCards]="dataCards" [nCards]="nCards">
 </app-wrap-cards>
-<div class="text-center my-10">
-  <app-call-to-action></app-call-to-action>
+<div class="grid md:grid-cols-4 my-10 mb-24 mx-4 lg:mx-10">
+  <div class="md:col-start-2 md:col-span-2">
+    <app-call-to-action></app-call-to-action>
+  </div>
 </div>

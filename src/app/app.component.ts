@@ -8,12 +8,13 @@ import { I18nServiceService } from './i18n-service/i18n-service.service';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+
   constructor(
     translate: TranslateService,
     private i18nService: I18nServiceService
   ) {
     translate.setDefaultLang('en');
-    translate.use('es');
+    translate.use('en');
   }
 
   changeLocale(locale: string) {

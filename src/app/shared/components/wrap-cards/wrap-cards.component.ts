@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CardModel } from '@core/models/card.model';
 
 @Component({
   selector: 'app-wrap-cards',
@@ -7,29 +6,11 @@ import { CardModel } from '@core/models/card.model';
   styleUrls: ['./wrap-cards.component.sass']
 })
 export class WrapCardsComponent implements OnInit {
+
+  @Input() nCards : string = 'grid-cols-4'
   
-  @Input() cardImg? : any = ''
-  @Input() cardTitle? : string = ''
-  @Input() cardText? : string = ''
-  
-  @Input() dataCards: Array<CardModel> = []
-
-
-  // @Input() cards = [
-  //   { 
-  //     title: this.cardTitle,
-  //     image: this.cardImg,
-  //     text: this.cardText
-  //   }
-  // ];
-
-
-  // cities = [
-  //   { name: "aaa", algo: "result" },
-  //   { name: "bbb", algo: "result" },
-  //   { name: "ccc", algo: "result" },
-  //   { name: "ddd", algo: "result" }
-  // ];
+  @Input() dataCards: Array<any> = []
+  param = {value: 'world'};
 
   constructor() { }
  

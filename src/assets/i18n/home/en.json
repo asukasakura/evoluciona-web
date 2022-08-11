@@ -1,18 +1,16 @@
 {
-  "HOME_WORKS": "Home works!",
   "HEADER_TEXT": "At Evoluciona we design Simple, practical Transport Intelligence solutions, always thinking about the real needs of our clients.",
   "DESCRIPTION": {
-    "TITLE": "Us",
+    "TITLE": "About Us",
     "TEXT": "Evoluciona is a company with more than 15 years of experience in Intelligent Transportation Systems on different highways in Europe and America. Our specialization extends from the conceptualization, commercial formulation of technological products and services, to the establishment of requirements, direction, acquisition/bidding, design, construction and maintenance of solutions that help improve operations and the effectiveness of systems. At Evoluciona, experience allows us to design simple, practical solutions, always thinking about the real needs of our clients."
   },
-  "CARDS": {
-    "ELECTRONIC_TOLL": "ELECTRONIC TOLL",
-    "ELECTRONIC_TOLL_TEXT": "Evoluciona has experience in managing electronic toll implementation projects with Multi Lane Free Flow technology.",
-    "CENTRAL_TOLL_SYSTEMS_MONITORING_BACK_OFFICE": "CENTRAL TOLL SYSTEMS, MONITORING, BACK OFFICE",
-    "CENTRAL_TOLL_SYSTEMS_MONITORING_BACK_OFFICE_TEXT": "Evolve has staff experienced in the design of central toll systems including monitoring, operational back office and commercial back office.",
-    "OPERATIONAL_CONTROL_ITS_BACK_OFFICE": "OPERATIONAL CONTROL ITS BACK OFFICE",
-    "OPERATIONAL_CONTROL_ITS_BACK_OFFICE_TEXT": "Los profesionales de evoluciona cuentan con experiencia en la especificación, ingeniería y dirección de proyectos de automatización ITS incluyendo entre los más comunes, gestión de tráfico, SCADA, CCTV, postes SOS y Gestión de Incidentes.",
-    "ADVICE_ON_PROJECTS": "ADVICE ON PROJECTS",
-    "ADVICE_ON_PROJECTS_TEXT": "We evaluate different solutions in technological projects, considering technical aspects, support capacity, experience and the service model that suits each case."    
-  }
+  "ELECTRONIC_TOLL": "ELECTRONIC TOLL",
+  "ELECTRONIC_TOLL_TEXT": "Evoluciona has experience in managing electronic toll implementation projects with Multi Lane Free Flow technology.",
+  "CENTRAL_TOLL_SYSTEMS_MONITORING_BACK_OFFICE": "CENTRAL TOLL SYSTEMS, MONITORING, BACK OFFICE",
+  "CENTRAL_TOLL_SYSTEMS_MONITORING_BACK_OFFICE_TEXT": "Evolve has staff experienced in the design of central toll systems including monitoring, operational back office and commercial back office.",
+  "OPERATIONAL_CONTROL_ITS_BACK_OFFICE": "OPERATIONAL CONTROL ITS BACK OFFICE",
+  "OPERATIONAL_CONTROL_ITS_BACK_OFFICE_TEXT": "<small>FALTA</small>",
+  "ADVICE_ON_PROJECTS": "ADVICE ON PROJECTS",
+  "ADVICE_ON_PROJECTS_TEXT": "We evaluate different solutions in technological projects, considering technical aspects, support capacity, experience and the service model that suits each case.",
+  "CONTACT_US": "Contact us"
 }

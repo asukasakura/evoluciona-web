@@ -15,12 +15,8 @@ const routes: Routes = [
     loadChildren: () => import(`@modules/contact/contact.module`).then(m => m.ContactModule)
   },
   {
-    path: 'us',
-    loadChildren: () => import(`@modules/us/us.module`).then(m => m.UsModule)
-  },
-  {
     path: '**',
-    redirectTo: '/'
+    redirectTo: '/home'
   }
 ];
 

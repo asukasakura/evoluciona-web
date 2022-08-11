@@ -11,13 +11,16 @@ export class DescriptionComponent implements OnInit {
 
   @Input() descriptionTitle? : string = ''
   @Input() descriptionText? : string = ''
+  @Input() gridCols : string = ''
+  @Input() spanCol1 : string = ''
+  @Input() spanCol2 : string = ''
+  @Input() startCol2 : string = ''
 
   constructor(
     private translate: TranslateService, 
     private i18nService: I18nServiceService
     ) {
     translate.setDefaultLang('en');
-    translate.use('en');
   }
 
   ngOnInit(): void {

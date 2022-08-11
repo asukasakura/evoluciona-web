@@ -1,9 +1,8 @@
 {
   "Sitetitle": "Angular Multi Language Site",
-  "MENU" : {
-    "HOME" : "Home",
-    "PRODUCTS" : "Products",
-    "ABOUT_US" : "About us",
-    "CONTACT" : "Contact"
-  }
+  "HOME" : "Home",
+  "PRODUCTS" : "Products",
+  "CONTACT" : "Contact",
+  "FOLLOW_US_ON_NETWORKS": "FOLLOW US ON NETWORKS",
+  "ALL_RIGHTS_RESERVED": "All Rights Reserved."
 }

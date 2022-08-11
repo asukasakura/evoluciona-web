@@ -1,9 +1,13 @@
-<mat-grid-list cols="2" gutterSize="15px" class="bg-primary des" rowHeight="300px">
-  <mat-grid-tile>
-    <h2 [innerHTML]="'DESCRIPTION.TITLE' | translate" class="text-4xl text-left"></h2>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <p [innerHTML]="'DESCRIPTION.TEXT' | translate"></p>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="container-full bg-primary px-10">
+  <div [ngClass]="gridCols" class="description grid gap-10 place-content-start place-items-center container max-w-[96rem]">
+    <div [ngClass]="spanCol1" class="place-self-start self-center">
+      <h2 [innerHTML]="'DESCRIPTION.TITLE' | translate" class="text-2xl md:text-4xl font-medium"></h2>
+    </div>
+    <div [ngClass]="[spanCol2, startCol2]">
+      <p class="texl-lg md:text-xl"
+       [innerHTML]="'DESCRIPTION.TEXT' | translate"></p>
+    </div>
+  </div>
+</div>
+
 

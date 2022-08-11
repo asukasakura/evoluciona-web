@@ -1,5 +1,8 @@
-<mat-grid-list cols="4" gutterSize="15px" class="des" rowHeight="fit">
-  <mat-grid-tile *ngFor="let card of dataCards">
-    <app-card [cards]="card"></app-card>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="container-full px-4 lg:px-10">
+  <div [ngClass]="nCards" class="grid gap-4 container max-w-[96rem] cards">
+    <div *ngFor="let card of dataCards" class="py-4 md:py-14">
+      <app-card [cards]="card"></app-card>
+    </div>
+  </div>
+</div>
+

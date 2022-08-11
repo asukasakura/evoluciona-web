@@ -7,8 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-import { MaterialModule } from './material.module';
+import { ScrollAnchorDirective } from './directives/scroll-anchor.directive';
+import { ScrollSectionDirective } from './directives/scroll-section.directive';
+import { ScrollManagerDirective } from './directives/scroll-manager.directive';
+import { PlayerStateService } from '@modules/products/player-state.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -16,7 +18,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScrollAnchorDirective,
+    ScrollSectionDirective,
+    ScrollManagerDirective
   ],
   imports: [
     BrowserModule,
@@ -30,10 +35,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       },
       isolate: true,
-    }),
-    MaterialModule
+    })
   ],
-  providers: [],
+  providers: [PlayerStateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

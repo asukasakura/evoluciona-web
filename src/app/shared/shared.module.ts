@@ -1,9 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MaterialModule } from './material.module';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { IconModule } from './icon.module';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MaterialModule } from '../material.module';
-import { RouterModule } from '@angular/router';
 import { HeroComponent } from './components/hero/hero.component';
 import { WrapHeroComponent } from './components/wrap-hero/wrap-hero.component';
 import { DescriptionComponent } from './components/description/description.component';
@@ -11,10 +16,7 @@ import { WrapDescriptionComponent } from './components/wrap-description/wrap-des
 import { WrapCardsComponent } from './components/wrap-cards/wrap-cards.component';
 import { CardComponent } from './components/card/card.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
-
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -30,11 +32,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     WrapDescriptionComponent,
     WrapCardsComponent,
     CardComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    SocialMediaComponent
   ],
   imports: [
     RouterModule,
     MaterialModule,
+    IconModule,
     CommonModule,
     TranslateModule.forChild({
       loader: {
@@ -54,7 +58,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     WrapDescriptionComponent,
     WrapCardsComponent,
     CardComponent,
-    CallToActionComponent
+    CallToActionComponent,
+    SocialMediaComponent
   ]
 })
 export class SharedModule { }

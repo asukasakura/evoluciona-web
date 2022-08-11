@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { I18nServiceService } from 'src/app/i18n-service/i18n-service.service';
 
@@ -14,18 +14,39 @@ export class HeaderComponent implements OnInit {
     defaultOptions: Array<any>, accessLink: Array<any> }
      = { defaultOptions: [], accessLink: [] 
   }
+  
+
+  selectDiv = false;
+  
+  toggleDiv() {
+    this.selectDiv = !this.selectDiv;
+  }
+
+  // const menu = document.getElementById('menu');
+  // function toggleMenu(this: any) {
+  //     this.menu.classList.toggle('hidden');
+  //     this.menu.classList.toggle('w-full');
+  //     this.menu.classList.toggle('h-screen');
+  // }
 
   constructor(
     private translate: TranslateService, 
-    private i18nService: I18nServiceService
+    private i18nService: I18nServiceService,
+    private router: Router
     ) {
     translate.setDefaultLang('en');
-    translate.use('en');
+
+    router.events.subscribe((val) => {
+      if (val instanceof NavigationEnd) {
+        this.selectDiv = false;
+      }
+    });
   }
 
   changeLocale(locale: string) {
     this.i18nService.changeLocale(locale);   
   }
+
   
   ngOnInit(): void {
 
@@ -33,19 +54,15 @@ export class HeaderComponent implements OnInit {
 
     this.mainMenu.defaultOptions = [
       {
-        name: 'Inicio',
+        name: 'HOME',
         router: ['/', 'home']
       },
       {
-        name: 'Productos',
+        name: 'PRODUCTS',
         router: ['/', 'products']
       },
       {
-        name: 'Nosotros',
-        router: ['/', 'us']
-      },
-      {
-        name: 'Contacto',
+        name: 'CONTACT',
         router: ['/', 'contact']
       }
     ]

@@ -16,19 +16,15 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.mainMenu.defaultOptions = [
       {
-        name: 'Inicio',
+        name: 'HOME',
         router: ['/']
       },
       {
-        name: 'Productos',
+        name: 'PRODUCTS',
         router: ['/', 'products']
       },
       {
-        name: 'Nosotros',
-        router: ['/', 'us']
-      },
-      {
-        name: 'Contacto',
+        name: 'CONTACT',
         router: ['/', 'contact']
       }
     ]

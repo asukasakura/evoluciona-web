@@ -1,9 +1,8 @@
 {
   "Sitetitle" : "Sitio Angular Multi Lenguaje",
-  "MENU" : {
-    "HOME" : "Inicio",
-    "PRODUCTS" : "Productos",
-    "ABOUT_US" : "Nosotros",
-    "CONTACT" : "Contacto"
-  }
+  "HOME" : "Inicio",
+  "PRODUCTS" : "Productos",
+  "CONTACT" : "Contacto",
+  "FOLLOW_US_ON_NETWORKS": "SÍGUENOS EN LAS REDES",
+  "ALL_RIGHTS_RESERVED": "Todos los derechos reservados."
 }

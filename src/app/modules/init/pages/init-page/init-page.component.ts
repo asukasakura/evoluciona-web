@@ -18,31 +18,33 @@ export class InitPageComponent implements OnInit {
   cardParagraph_3!: string;
   cardParagraph_4!: string;
   
+  nCards = 'grid-cols-1 md:grid-cols-4'
+  gridCols = 'grid-cols-1 md:grid-cols-6'
+  spanCol1 = 'md:col-span-2'
+  spanCol2 = 'md:col-span-4'
+  startCol2 = 'md:col-start-3'
+  
   @Input() dataCards: Array<any> = [
     {
-      _id: 1,
-      title: 'ELECTRONIC TOLL',
-      paragraph: 'Evoluciona has experience in managing electronic toll implementation projects with Multi Lane Free Flow technology.',
-      image: './assets/images/icons/tmfeAutopistaIcons.svg'
+      title: 'ELECTRONIC_TOLL',
+      image: './assets/images/icons/tmfeAutopistaIcons.svg',
+      paragraph: 'ELECTRONIC_TOLL_TEXT'
     },
     {
-      _id: 2,
-      title: 'CENTRAL TOLL SYSTEMS, MONITORING, BACK OFFICE',
-      paragraph: 'Evolve has staff experienced in the design of central toll systems including monitoring, operational back office and commercial back office.',
-      image: './assets/images/icons/tmfeEstacionamientoIcons.svg'
+      title: 'CENTRAL_TOLL_SYSTEMS_MONITORING_BACK_OFFICE',
+      image: './assets/images/icons/tmfeEstacionamientoIcons.svg',
+      paragraph: 'CENTRAL_TOLL_SYSTEMS_MONITORING_BACK_OFFICE_TEXT'
     },
     {
-      _id: 3,
-      title: 'OPERATIONAL CONTROL ITS BACK OFFICE',
-      paragraph: 'Los profesionales de evoluciona cuentan con experiencia en la especificación, ingeniería y dirección de proyectos de automatización ITS incluyendo entre los más comunes, gestión de tráfico, SCADA, CCTV, postes SOS y Gestión de Incidentes.',
-      image: './assets/images/icons/tmfTorniqueteIcons.svg'
+      title: 'OPERATIONAL_CONTROL_ITS_BACK_OFFICE',
+      image: './assets/images/icons/tmfTorniqueteIcons.svg',
+      paragraph: 'OPERATIONAL_CONTROL_ITS_BACK_OFFICE_TEXT'
     },
     {
-      _id: 4,
-      title: 'ADVICE ON PROJECTS',
-      paragraph: 'We evaluate different solutions in technological projects, considering technical aspects, support capacity, experience and the service model that suits each case.',
-      image: './assets/images/icons/tmfeAdviceIcon.svg'
-    },
+      title: 'ADVICE_ON_PROJECTS',
+      image: './assets/images/icons/tmfeAdviceIcon.svg',
+      paragraph: 'ADVICE_ON_PROJECTS_TEXT'
+    }
   ]
 
 
@@ -51,13 +53,12 @@ export class InitPageComponent implements OnInit {
     private i18nService: I18nServiceService
     ) {
     translate.setDefaultLang('en');
-    translate.use('en');
 
-    translate.stream('CARDS.ELECTRONIC_TOLL').subscribe(res => { 
-      console.log(res)
-      this.cardTitle_1 = res['CARDS.ELECTRONIC_TOLL']
-    });
-    console.log(this.cardTitle_1)
+    // translate.stream('CARDS.ELECTRONIC_TOLL').subscribe(res => { 
+      // console.log(res)
+    //   this.cardTitle_1 = res['CARDS.ELECTRONIC_TOLL']
+    // });
+    // console.log(this.cardTitle_1)
     // translate.get([
     //   'CARDS.ELECTRONIC_TOLL'
     // ])
@@ -70,5 +71,4 @@ export class InitPageComponent implements OnInit {
     this.i18nService.localeEvent.subscribe(locale => this.translate.use(locale)); 
     
   }
-    
 }

@@ -14,7 +14,6 @@ export class ContactPageComponent implements OnInit {
     private i18nService: I18nServiceService
     ) {
     translate.setDefaultLang('en');
-    translate.use('en');
   }
 
   ngOnInit(): void {
